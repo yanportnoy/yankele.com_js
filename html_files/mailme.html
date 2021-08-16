@@ -1,0 +1,96 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+     <title>Yan's coner</title>
+</head>
+<body>
+<script LANGUAGE="JavaScript">
+<!--
+/*  
+	Hint and UnHint
+	Copyright 1997 by Chris Baron
+	All Rights Reserved
+
+	Created for the book Drag 'n Drop CGI: 
+		Enhancing your web pages without programming
+	from Addison-Wesley Developer's Press
+
+	Buy the book for usage information. :-)
+*/
+
+/*
+	*****************************************************
+	Configuration Block
+	*****************************************************
+*/
+	hintdelay = 2000;			// time to display hint in 1000/ths of a second
+	winhintdelay = 1500; 		// same for window hints
+	closebuttontext = "Gotcha Dude!";	// text for the close button on button hints
+	hwinwidth = 200;			// width of the hint window 
+	hwinheight = 120;			// height of the hint window
+	hwintitle = "Hint!";
+	hintbg = "#FFFF80";		// nice balloon help yellow
+/*
+	*****************************************************
+	End of Configuration Block
+	*****************************************************
+*/
+	hintwin = "";
+
+	function hint(text) {
+		window.status = text;
+		window.setTimeout("unHint()", hintdelay);
+		HINTING = true;
+		return true;
+	}
+
+	function unHint(text) {
+		window.status = text;
+		HINTING = false;
+		return true;
+	}
+
+	function winHint(text, closetype) {
+		hintwin = window.open("","hintwin","width="+hwinwidth+
+			",height="+hwinheight+",scrollbars=yes,resizable=yes,status=0");
+		hintwin = window.open("","hintwin","width="+hwinwidth+
+			",height="+hwinheight+",scrollbars=yes,resizable=yes,status=0");	// twice for Netscape 2
+		hintwin.document.write("<HEAD><TITLE>"+hwintitle+"</TITLE>");
+		hintwin.document.write("<BODY BGCOLOR='"+hintbg+"'><P>"+text.bold());
+		if (closetype == 'timer')  {
+			hint_to = window.setTimeout("unWinHint()", winhintdelay);
+		}
+		else if (closetype == 'button') {
+			hintwin.document.write("<CENTER><FORM><P>");
+			hintwin.document.write("<INPUT TYPE='BUTTON' VALUE='"+
+				closebuttontext+"' onClick='window.close();'>");
+			hintwin.document.write("</FORM></CENTER>");
+		}
+		hintwin.document.close();
+	}
+
+	function unWinHint() {
+		if (hintwin != null) if ( hintwin.document != null) hintwin.close();
+	}
+		
+//-->
+</script>
+
+<center>
+<b><i>Leav your message here.</i></b>
+<br><form ACTION="mailto:yankl@yankele.com" METHOD=POST>
+<b><i>Name</i></b><input NAME="Name">
+<p><b><i>E-mail:</i></b><input NAME="E-mail address:">
+<p><b><i>URL :</i></b><input NAME="URL">
+<p><textarea NAME="feedback" ROWS=7 COLS=50>
+></textarea>
+<p><input TYPE="submit" VALUE="Send"><input TYPE="reset" VALUE="Clear">
+<p></form>
+<embed width="0" heght="0" src="fmcm1001.wav" autostart="true">
+<a href="mailto:yankl@yankele.com" onMouseOver="winHint('Use this buton only, if you cannot submit forms! Else, please fill the form.','mouse');" onMouseOut="unWinHint('XXX');return true;">
+<img SRC="../Images/email1.gif" ALT="yankl@yankele.com" BORDER=0 height=26 width=89></a>
+<br>E-mail:yankl@yankele.com
+<br>
+</center>
+</body>
+</html>
