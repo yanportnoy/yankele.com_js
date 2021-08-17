@@ -9,12 +9,7 @@
 
 html,
 body {
-  background: #93d9fa;
   line-height: 1.6;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 header {
@@ -24,15 +19,18 @@ header {
 }
 
 .container {
-  background: #d1e8f3;
+  width: 700px;
+  border: 2px solid;
+  padding-top: 5px;
+  font-size: 18px;
+  font-weight: bold;
   margin: auto;
-  width: 500px;
-  overflow: auto;
 }
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #4a4a4a;
   overflow: hidden;
+  margin-bottom: 5em;
 }
 
 /* Style the links inside the navigation bar */
