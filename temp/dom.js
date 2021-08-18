@@ -23,7 +23,7 @@
 // headerTitle.textContent = 'Hello';
 // headerTitle.innerText = 'Goodbye';
 // console.log(headerTitle.innerText);
-// headerTitle.innerHTML = '<h3>Hello</h3>';
+// headerTitle.innerHTML = 'Hello';
 // header.style.borderBottom = 'solid 3px #000';
 
 // GETELEMENTSBYCLASSNAME //
@@ -89,10 +89,8 @@
 //   even[i].style.backgroundColor = '#ccc';
 // }
 
-
-
 // TRAVERSING THE DOM //
-var itemList = document.querySelector('#items');
+var itemList = document.querySelector("#items");
 // parentNode
 // console.log(itemList.parentNode);
 // itemList.parentNode.style.backgroundColor = '#f4f4f4';
@@ -116,7 +114,6 @@ var itemList = document.querySelector('#items');
 // console.log(itemList.firstElementChild);
 // itemList.firstElementChild.textContent = 'Hello 1';
 
-
 // lastChild
 // console.log(itemList.lastChild);
 // lastElementChild
@@ -136,28 +133,28 @@ var itemList = document.querySelector('#items');
 // createElement
 
 // Create a div
-var newDiv =  document.createElement('div');
+var newDiv = document.createElement("div");
 
 // Add class
-newDiv.className= 'hello';
+newDiv.className = "hello";
 
 // Add id
-newDiv.id = 'hello1';
+newDiv.id = "hello1";
 
 // Add attr
-newDiv.setAttribute('title', 'Hello Div');
+newDiv.setAttribute("title", "Hello Div");
 
 // Create text node
-var newDivText = document.createTextNode('Hello World');
+var newDivText = document.createTextNode("Hello World");
 
 // Add text to div
 newDiv.appendChild(newDivText);
 
-var container = document.querySelector('header .container');
-var h1 = document.querySelector('header h1');
+var container = document.querySelector("header .container");
+var h1 = document.querySelector("header h1");
 
 console.log(newDiv);
 
-newDiv.style.fontSize = '30px';
+newDiv.style.fontSize = "30px";
 
 container.insertBefore(newDiv, h1);

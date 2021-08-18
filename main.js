@@ -10,16 +10,16 @@ function onItemClick(e) {
   for (let i = 0; i < navBarElements.length; i++) {
     navBarElements[i].classList.remove("active");
   }
-
+  //navBarElements.forEach();
   e.target.setAttribute("class", "active");
-
   var fileName =
-    '<object type="text/html" data=html/' + e.target.id + ".html></object>";
+    `<object class="h-100 d-inline-block w-100" style="width: 100%" type="text/html" data=html/` +
+    e.target.id +
+    `.html>"`;
   console.log(fileName);
   document.getElementById("content").innerHTML = fileName;
 }
 
 function load_home() {
-  document.getElementById("content").innerHTML =
-    '<object type="text/html" data="html/2.html" ></object>';
+  document.getElementById("content").innerHTML = "";
 }
