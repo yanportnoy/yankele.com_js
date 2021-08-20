@@ -19,7 +19,7 @@ function onItemClick(e) {
     e.target.id +
     `.html>"`;
   console.log(fileName);
-  document.getElementById("content").innerHTML = fileName;
+  // document.getElementById("content").innerHTML = fileName;
 }
 
 function getHTML(id) {
