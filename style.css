@@ -24,16 +24,97 @@ td {
   margin: 0;
   text-align: left;
 }
+
 .container {
   position: absolute;
   width: 100%;
   max-height: 100%;
   padding-top: 5px;
   font-size: 18px;
-  font-weight: bold;
+
   margin: auto;
-  text-align: center;
+  text-align: left;
 }
+.myResume {
+  width: 100%;
+  padding-left: 5%;
+  align-self: left;
+  max-height: 100%;
+  padding-top: 5px;
+  font-size: 18px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.myName {
+  position: relative;
+  margin: auto;
+  font-weight: bold;
+  text-align: right;
+  font-size: 20px;
+  width: 20%;
+}
+.myAddress {
+  width: 50%;
+  position: relative;
+  align-self: left;
+  align-items: left;
+  font-style: italic;
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+}
+.myGrp {
+  padding-left: 15px;
+}
+.myObjective {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+.h4_title {
+  width: 20%;
+  padding-right: 10px;
+}
+
+.grpHdr {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.myExperience {
+  width: 100%;
+  padding-right: 10px;
+}
+.myDates {
+  width: 20%;
+  padding-right: 10px;
+  text-align: left;
+}
+.myCompany {
+  width: 45%;
+  text-align: center;
+  padding-right: 10px;
+}
+.myLocation {
+  width: 30;
+}
+.myPosition {
+  font-style: italic;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+.myResponsibility {
+  padding-left: 5%;
+  padding-bottom: 10px;
+}
+li {
+  text-align: left;
+  padding-left: 5px;
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #4a4a4a;
