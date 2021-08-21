@@ -2,16 +2,18 @@ const navBarElements = document.querySelectorAll("a");
 const navBarElement = document.getElementById("navBarItems");
 const myBody = document.getElementById("body");
 navBarElement.addEventListener("click", onItemClick);
-myBody.addEventListener("onload", () => {
-  page = "html/home.html";
-  fetch(page)
-    .then((data) => data.text())
-    .then((html) => (document.getElementById("content").innerHTML = html));
-});
+myBody.addEventListener("onload", homeLoad);
 // console.log(navBarElements);
 // for (let i = 0; i < navBarElements.length; i++) {
 //   console.log(navBarElements[i]);
 // }
+function homeLoad() {
+  page = "html/home.html";
+  fetch(page)
+    .then((data) => data.text())
+    .then((html) => (document.getElementById("content").innerHTML = html));
+}
+
 function onItemClick(e) {
   // console.log(e.target);
   for (let i = 0; i < navBarElements.length; i++) {
