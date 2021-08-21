@@ -1,6 +1,13 @@
 const navBarElements = document.querySelectorAll("a");
 const navBarElement = document.getElementById("navBarItems");
+const myBody = document.getElementById("content");
 navBarElement.addEventListener("click", onItemClick);
+myBody.addEventListener("onload", () => {
+  page = "html/home.html";
+  fetch(page)
+    .then((data) => data.text())
+    .then((html) => (document.getElementById("content").innerHTML = html));
+});
 // console.log(navBarElements);
 // for (let i = 0; i < navBarElements.length; i++) {
 //   console.log(navBarElements[i]);
@@ -14,12 +21,12 @@ function onItemClick(e) {
   e.target.setAttribute("class", "active");
   getHTML(e.target.id);
 
-  var fileName =
-    `<object class="h-100 d-inline-block w-100" style="width: 100%" type="text/html" data=html/` +
-    e.target.id +
-    `.html>"`;
-  console.log(fileName);
-  document.getElementById("content").innerHTML = fileName;
+  // var fileName =
+  //   `<object class="h-100 d-inline-block w-100" style="width: 100%" type="text/html" data=html/` +
+  //   e.target.id +
+  //   `.html>"`;
+  // console.log(fileName);
+  // document.getElementById("content").innerHTML = fileName;
 }
 
 function getHTML(id) {
