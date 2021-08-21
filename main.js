@@ -1,6 +1,6 @@
 const navBarElements = document.querySelectorAll("a");
 const navBarElement = document.getElementById("navBarItems");
-const myBody = document.getElementById("content");
+const myBody = document.getElementById("body");
 navBarElement.addEventListener("click", onItemClick);
 myBody.addEventListener("onload", () => {
   page = "html/home.html";
