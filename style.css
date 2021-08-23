@@ -126,6 +126,7 @@ li {
 .prvBtn {
   color: red;
   width: 10%;
+  cursor: pointer;
 }
 .aImage {
   margin: 0;
@@ -136,10 +137,12 @@ li {
   color: red;
   width: 10%;
   text-align: right;
+  cursor: pointer;
 }
 .bx {
   font-size: 42px;
   color: red;
+  cursor: pointer;
 }
 
 /* Add a black background color to the top navigation */

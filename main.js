@@ -20,19 +20,16 @@ function onItemClick(e) {
   //navBarElements.forEach();
   e.target.setAttribute("class", "active");
   getHTML(e.target.id);
-  if (e.target.id === "photo") {
-    const circle = document.getElementsByClassName("bx");
-    console.log(circle);
-  }
   console.log(e.target.id);
-  // var fileName =
-  //   `<object class="h-100 d-inline-block w-100" style="width: 100%" type="text/html" data=html/` +
-  //   e.target.id +
-  //   `.html>"`;
-  // console.log(fileName);
-  // document.getElementById("content").innerHTML = fileName;
+
+  if (e.target.id === "photo") {
+    console.log(document); //.getElementById("setOfCircles"));
+  }
 }
 
+function onBtnClck(e) {
+  console.log(e);
+}
 function getHTML(id) {
   page = "html/" + id + ".html";
   fetch(page)
