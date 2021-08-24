@@ -57,6 +57,16 @@ td {
   align-items: center;
   height: 100%;
 }
+
+.myCarousel {
+  position: absolute;
+  width: 60%;
+  height: auto;
+}
+.myCarousel img {
+  height: 750px;
+}
+
 .myResume {
   width: 100%;
   padding-left: 5%;
