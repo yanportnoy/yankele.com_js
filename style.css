@@ -1,17 +1,18 @@
 /* Google Fonts Import Link */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Klee+One&family=Roboto+Slab:wght@100&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", serif;
 }
 
 html,
 body {
   line-height: 1.6;
   margin: 0;
-  min-height: 100vh;
+  background-color: rgb(232, 232, 248);
+  min-height: 100%;
 }
 
 header {
@@ -46,9 +47,10 @@ td {
 .message {
   align-items: center;
   padding: 0 10;
-  font-family: "Roboto", sans-serif;
-  font-size: 10px;
-  font-weight: normal;
+  margin: auto;
+  font-family: "Klee One", cursive;
+  font-size: 8px;
+  font-style: italic;
 }
 
 .flex {
@@ -206,7 +208,6 @@ li {
 /* Change the color of links on hover */
 .topnav a:hover {
   background-color: #ddd;
-  color: green;
   font-style: bold;
   cursor: pointer;
 }
