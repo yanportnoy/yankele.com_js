@@ -3,7 +3,9 @@ const navBarElement = document.getElementById("navBarItems");
 const carousel = document.getElementById("myCarousel");
 const startCard = document.getElementById("content");
 const setOfCircles = document.getElementById("setOfCircles");
-
+const navBtn = document.getElementById("navBtn");
+console.log(navBtn);
+navBtn.addEventListener("click", onNavBtbClck);
 setOfCircles.addEventListener("click", onBtnClck);
 navBarElement.addEventListener("click", onItemClick);
 
@@ -16,6 +18,8 @@ const links = [
   "https://lh3.googleusercontent.com/DzDYaqHsPZtDUVePlfdFUVWJ9YCuE6D10muFANlKv7uoiyDr-fikjlGwVGTOGjRaRnXXQqGP8Q2jSWML1ffPCbF1jl4ZBAfR7GauzJNN0sq4DzAUBCbF6hsTIcIeHfadjBxBCvfS-SE=w1920-h1080",
 ];
 
+let count = 0;
+
 function onItemClick(e) {
   // console.log(e.target);
   for (let i = 0; i < navBarElements.length; i++) {
@@ -25,7 +29,7 @@ function onItemClick(e) {
   e.target.setAttribute("class", "active");
 
   if (e.target.id === "photo") {
-    console.log(startCard);
+    //console.log(startCard);
     startCard.hidden = true;
     myCarousel.hidden = false;
     console.log(e);
@@ -39,7 +43,32 @@ function onItemClick(e) {
 function onBtnClck(e) {
   console.log(e.target.id);
   document.getElementById("aImg").src = links[e.target.id];
+  count = e.target.id;
 }
+
+function onNavBtbClck(e1) {
+  //console.log(e1.target.id);
+
+  if (e1.target.id === "nxtBtn") {
+    console.log("next");
+    count++;
+    if (count >= links.length) {
+      count = 0;
+    }
+    console.log(count);
+    document.getElementById("aImg").src = links[count];
+  } else if (e1.target.id === "prvBtn") {
+    console.log("prv");
+    count--;
+    if (count < 0) {
+      count = links.length - 1;
+    }
+    console.log(count);
+    document.getElementById("aImg").src = links[count];
+  }
+  //document.getElementById("aImg").src = links[e.target.id];
+}
+
 function getHTML(id) {
   page = "html/" + id + ".html";
   fetch(page)

@@ -165,7 +165,7 @@ li {
   font-size: 42px;
 }
 .prvBtn {
-  color: red;
+  color: grey;
   width: 10%;
   cursor: pointer;
 }
@@ -175,17 +175,20 @@ li {
   height: auto;
 }
 .nxtBtn {
-  color: red;
+  color: grey;
   width: 10%;
   text-align: right;
   cursor: pointer;
 }
 .bx {
   font-size: 42px;
-  color: red;
+  color: grey;
   cursor: pointer;
 }
 
+.bx:hover {
+  font-size: 44px;
+}
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: #4a4a4a;
