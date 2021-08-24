@@ -21,10 +21,16 @@ const links = [
 let count = 0;
 
 function onItemClick(e) {
-  // console.log(e.target);
+  console.log(e.target.id);
+  if (e.target.id === "h1") {
+    e.target.id = "home";
+    console.log(e.target.id);
+    return;
+  }
   for (let i = 0; i < navBarElements.length; i++) {
     navBarElements[i].classList.remove("active");
   }
+
   //navBarElements.forEach();
   e.target.setAttribute("class", "active");
 
