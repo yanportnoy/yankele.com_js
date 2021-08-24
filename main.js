@@ -1,9 +1,13 @@
 const navBarElements = document.querySelectorAll("a");
 const navBarElement = document.getElementById("navBarItems");
+const carousel = document.getElementById("myCarousel");
+const startCard = document.getElementById("content");
+const setOfCircles = document.getElementById("setOfCircles");
 
+setOfCircles.addEventListener("click", onBtnClck);
 navBarElement.addEventListener("click", onItemClick);
+
 const links = [
-  "https://lh3.googleusercontent.com/31JLCohGB26StrE6oSSHdTBPZKMlxBijWpS8QTNl9RoBVuSmViJVEdwIZZkUSHavbQUuXR3VXwB8fYLIkpp-7BYPwUr5DQuGUc6XuzvET3FAJ7olVDbvoewy8cJYRBwp-IXjM71pccI=w1920-h1080",
   "https://lh3.googleusercontent.com/31JLCohGB26StrE6oSSHdTBPZKMlxBijWpS8QTNl9RoBVuSmViJVEdwIZZkUSHavbQUuXR3VXwB8fYLIkpp-7BYPwUr5DQuGUc6XuzvET3FAJ7olVDbvoewy8cJYRBwp-IXjM71pccI=w1920-h1080",
   "https://lh3.googleusercontent.com/dGRnMAz0E54vwi9gj3ae2G6qnkJ4QSlDIt_hpHWKrW9WUXxIcH5Ng2bFuXnJTALETjM-7l3F9CFO49HXRfSBeqRo2_VZn4SnOQ8ye2gyzI03ckXVnWRDaOrH-tNpA2bKaT7Kn7m2NSA=w1920-h1080",
   "https://lh3.googleusercontent.com/XZrQ-WYZHlAOxWmc6R7FtAxFFbDALgFxWOzjYTw8bX0X25N5SGJ615722PvgtKP3VAU2bKaqy4u0svsTlrpNxJYD7AwHQfo63aOic8S6PUXFdQDD2FIQRNjLxGB-1NjdWo9WZi8ugVQ=w1920-h1080",
@@ -19,16 +23,22 @@ function onItemClick(e) {
   }
   //navBarElements.forEach();
   e.target.setAttribute("class", "active");
-  getHTML(e.target.id);
-  console.log(e.target.id);
 
   if (e.target.id === "photo") {
-    console.log(document); //.getElementById("setOfCircles"));
+    console.log(startCard);
+    startCard.hidden = true;
+    myCarousel.hidden = false;
+    console.log(e);
+  } else {
+    startCard.hidden = false;
+    myCarousel.hidden = true;
+    getHTML(e.target.id);
   }
 }
 
 function onBtnClck(e) {
-  console.log(e);
+  console.log(e.target.id);
+  document.getElementById("aImg").src = links[e.target.id];
 }
 function getHTML(id) {
   page = "html/" + id + ".html";

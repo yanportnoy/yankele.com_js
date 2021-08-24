@@ -31,11 +31,31 @@ td {
   position: absolute;
   width: 100%;
   max-height: 100%;
-  padding-top: 1px;
+  padding-top: 4px;
+  padding-left: 15px;
   font-size: 18px;
-
   margin: auto;
   text-align: left;
+}
+
+.photo {
+  align-items: center;
+  padding: 0 10;
+}
+
+.message {
+  align-items: center;
+  padding: 0 10;
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 .myResume {
   width: 100%;
@@ -168,7 +188,7 @@ li {
   display: block;
   color: #5eccff;
   text-align: center;
-  padding: 12px 14px;
+  padding: 2px 14px;
   text-decoration: none;
   font-size: 16px;
 }
@@ -178,6 +198,7 @@ li {
   background-color: #ddd;
   color: green;
   font-style: bold;
+  cursor: pointer;
 }
 
 /* Add an active class to highlight the current page */
@@ -190,4 +211,13 @@ li {
 /* Hide the link that should open and close the topnav on small screens */
 .topnav .icon {
   display: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
