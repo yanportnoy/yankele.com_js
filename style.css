@@ -16,7 +16,6 @@ body {
 }
 
 header {
-  background: #93d9fa;
   padding: 1px;
   text-align: center;
 }
@@ -191,10 +190,23 @@ li {
 }
 /* Add a black background color to the top navigation */
 .topnav {
+  display: flex;
+  flex-direction: row;
   background-color: #4a4a4a;
   overflow: hidden;
   margin-bottom: 5px;
   color: white;
+}
+
+.topnav .title h1 {
+  padding-right: 20%;
+  font-size: 16px;
+}
+
+.topnav .menu {
+  width: 100%;
+  align-content: right;
+  display: flex;
 }
 
 /* Style the links inside the navigation bar */
