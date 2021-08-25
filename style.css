@@ -30,6 +30,7 @@ td {
 .container {
   position: absolute;
   width: 100%;
+
   max-height: 100%;
   padding-top: 4px;
   padding-left: 15px;
@@ -38,20 +39,44 @@ td {
   text-align: left;
 }
 
+.startCard {
+  padding: 0 20px;
+}
+
 .photo {
   align-items: center;
   padding: 0 10;
 }
-
+.myImg {
+  border: 1px solid;
+  border-radius: 7px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
+}
 .message {
   align-items: center;
-  padding: 0 10;
+  padding: 0 10px;
   margin: auto;
   font-family: "Klee One", cursive;
-  font-size: 8px;
+  font-size: 18px;
   font-style: italic;
+  background-color: #fff;
+  border: 1px solid;
+  border-radius: 7px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
 }
+.infoCard {
+  align-items: center;
 
+  margin: auto;
+  font-family: "Klee One", cursive;
+  font-size: 14px;
+  font-style: italic;
+  background-color: #fff;
+  border: 1px solid;
+  border-radius: 7px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.25);
+  padding: 10px 10px;
+}
 .flex {
   display: flex;
   justify-content: center;
