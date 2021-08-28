@@ -39,6 +39,8 @@ function onItemClick(e) {
     startCard.hidden = true;
     myCarousel.hidden = false;
     console.log(e);
+  } else if (e.target.id === "easter-egg") {
+    getQuote();
   } else {
     startCard.hidden = false;
     myCarousel.hidden = true;
@@ -86,3 +88,6 @@ function load_home() {
   document.getElementById("content").innerHTML = "";
 }
 
+async function getQuote() {
+  console.log("click");
+}
