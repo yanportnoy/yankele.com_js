@@ -44,8 +44,9 @@ function onItemClick(e) {
       getHTML(e.target.id);
       joke = await getQuote();
       //console.log(joke);
-      let content = document.getElementById("content");
-      let message = content.firstChild.firstChild.nextSibling;
+      // let content = document.getElementById("content");
+      // let message = content.firstChild.firstChild.nextSibling;
+      let message = document.getElementById("quote");
       message.innerHTML = joke;
     })();
     //let joke = getQuote();
