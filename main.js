@@ -40,7 +40,15 @@ function onItemClick(e) {
     myCarousel.hidden = false;
     console.log(e);
   } else if (e.target.id === "easter-egg") {
-    getQuote();
+    (async () => {
+      getHTML(e.target.id);
+      joke = await getQuote();
+      //console.log(joke);
+      let content = document.getElementById("content");
+      let message = content.firstChild.firstChild.nextSibling;
+      message.innerHTML = joke;
+    })();
+    //let joke = getQuote();
   } else {
     startCard.hidden = false;
     myCarousel.hidden = true;
@@ -88,6 +96,23 @@ function load_home() {
   document.getElementById("content").innerHTML = "";
 }
 
+async function getQuote1() {
+  url = "https://api.chucknorris.io/jokes/random";
+  // await fetch(url)
+  //   .thenresponse) => return response.text())
+  //   .then((data) => console.log(data));
+  //console.log(myData);
+  const response = await fetch(url);
+  return response;
+
+  // return await fetch(url).then((response) => {
+  //   return response;
+}
+
 async function getQuote() {
-  console.log("click");
+  url = "https://api.chucknorris.io/jokes/random";
+  const response = await fetch(url);
+  var data = await response.json();
+  const myData = data.value;
+  return myData;
 }
